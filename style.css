@@ -19,3 +19,16 @@ background-color: rgb(108, 182, 252);
 border-radius:15px ;
 border: 0;
 }
+/* saving part  */
+#saving-input-fild{
+width: 100px;
+}
+.save-button{
+    padding: 10px 45px;
+    color: rgb(255, 255, 255);
+    font-size: larger;
+    font-weight: 600;
+    background-color: rgb(108, 182, 252);
+    border-radius:15px ;
+    border: 0;
+}
