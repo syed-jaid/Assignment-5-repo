@@ -18,23 +18,24 @@ document.getElementById('calculator-bnt').addEventListener('click', function () 
     const clothesvalue = parseFloat(clothes);
     //    if input is Negative 
     if (foodvalue < 0 || rentvalue < 0 || clothesvalue < 0 || Incomeparsevalue < 0) {
-        alert('Negative number is not granted,plz change the input vallue');
+        alert('Negative values not acceptable. Please enter a positive value!');
     }
     else {
         const Expensestotul = foodvalue + rentvalue + clothesvalue;
         let balancetotul = Incomeparsevalue - Expensestotul;
         if (isNaN(Expensestotul) || isNaN(balancetotul) || isNaN(Incomeparsevalue)) {
-            alert('change the input vallue');
+            alert('No text can be used. Please enter a number!');
         }
         else {
             // Expenses part
-            let Expenses = document.getElementById('toual-Expenses');
-            Expenses.innerText = Expensestotul;
-            // balance part 
-            let balance = document.getElementById('balance-after-Expenses')
-            balance.innerText = balancetotul;
             if (Expensestotul > Incomeparsevalue) {
-                alert('yuo have spaned a lot ok');
+                alert('You cant spend more than your income!');
+            } else {
+                let Expenses = document.getElementById('toual-Expenses');
+                Expenses.innerText = Expensestotul;
+                // balance part 
+                let balance = document.getElementById('balance-after-Expenses')
+                balance.innerText = balancetotul;
             }
         }
     }
@@ -50,24 +51,28 @@ document.getElementById('save-button').addEventListener('click', function () {
     const saveingInputValue = parseFloat(savingInput);
     // saving value 
     if (saveingInputValue < 0) {
-        alert('Negative number is not granted,plz change the input vallue');
+        alert('Negative values not acceptable. Please enter a positive value !');
     }
     else if (isNaN(saveingInputValue)) {
-        alert('change the input vallue');
+        alert('No text can be used. Please enter a number !');
     }
     else {
         const saveingValue = Incomeparsevaslue / 100 * saveingInputValue;
-        const savingtotul = document.getElementById('saving-Amount');
-        savingtotul.innerText = saveingValue;
         // balance after Expenses and saving 
         let balance = document.getElementById('balance-after-Expenses');
-        const balanceinnertext = balance.innerText;
-        // remain Balance amount
+        const savingtotul = document.getElementById('saving-Amount');
         const remainBalance = document.getElementById('remain-balance');
-        remainBalance.innerText = parseFloat(balanceinnertext) -
-            (Incomeparsevaslue / 100 * saveingInputValue);
+        const balanceinnertext = balance.innerText;
         if (saveingValue > balanceinnertext) {
-            alert('youtlajdjfljsad')
+            alert('You cant save so much money. Balance is low after expenses!')
+        }
+        else {
+            savingtotul.innerText = saveingValue;
+            // balance after Expenses and saving 
+
+            // remain Balance amount
+            remainBalance.innerText = parseFloat(balanceinnertext) -
+                (Incomeparsevaslue / 100 * saveingInputValue);
         }
     }
 })

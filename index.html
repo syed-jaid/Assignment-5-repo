@@ -17,58 +17,62 @@
 <body class="w-100 m-o">
     <!-- mani part -->
     <main class="">
-        <section class="container-xxl mx-auto p-0">
+        <section class="container-xxl mx-auto mb-5 pb-5 pt-3">
             <!-- main title   -->
 
-            <h1 class="main-title mt-4">
+            <h1 class="main-title mt-4 mb-5">
                 Money Calculator
             </h1>
             <div class="d-xl-flex ">
                 <!------------- image part ---------------->
-                <div class="m-3 w-100">
-                    <img class="w-100 h-100 " src="image/money.png" alt="">
+                <div class="mt-3 w-100">
+                    <img class="w-100 h-100 m-0 p-0" src="image/money.png" alt="">
                 </div>
                 <!---------------- money calculator ------------------>
-                <div class="calculator-section m-3 w-100">
-                    <div class="text-center fs-6">
+                <div id="calculator-section" class="text-center calculator-section mt-3 pb-5 pt-5 w-100">
+
+                    <div class="">
                         <!------ income input part  ------>
-                        <h5 class="text-center pt-3 ">Income</h5>
-                        <p class="my-4 fw-bold d-block ">Income :
-                            <input id="income-input" class="p-1 " type="text">
+                        <h3 class=" pt-3 fw-bold">Income</h3>
+                        <p class="my-4 fw-bold d-block ">
+                            Income :<input id="income-input" placeholder="Enter Your Income" class="p-1 " type="text">
                         </p>
                         <!-- Expenses input part -->
-                        <h5 class="text-center pt-1 ">Expenses</h5>
-                        <p class=" fw-bold ">For Foot:
-                            <input id="food-Expenses" class="p-1 " type="text">
+                        <h4 class=" pt-1 fw-bold">Expenses</h4>
+                        <p class=" fw-bold "><span>For Food:</span>
+                            <input placeholder="Enter Food cost" id="food-Expenses" class="p-1 " type="text">
                         </p>
-                        <p class=" fw-bold ">For Rant:
-                            <input id="rent-Expenses" class="p-1 " type="text">
+                        <p class=" fw-bold "> <span> For Rant: </span>
+                            <input placeholder="Enter Rant cost" id="rent-Expenses" class="p-1 " type="text">
                         </p>
-                        <p class=" fw-bold "><span> Clothes:</span>
-                            <input id="clothes-Expenses" class="p-1 " type="text">
+                        <p class=" fw-bold">
+                            <span>Clothess: </span>
+                            <input placeholder="Enter Clothes cost" id="clothes-Expenses" class="p-1 " type="text">
                         </p>
                     </div>
                     <!-- button of money calculator -->
-                    <div id="calculator-bnt" class="text-center">
+                    <div id="calculator-bnt" class="">
                         <button class="cal-button">Calculate</button>
                     </div>
                     <!------ totul result section  ------>
-                    <div class="text-center mt-4 mb-5">
-                        <h5>Total Expenses: <span id="toual-Expenses">0</span></h5>
-                        <h5> Balance: <span id="balance-after-Expenses">0</span></h5>
+                    <div class=" mt-4 mb-5 ">
+                        <h4 class="fw-bold">Total Expenses: <span id="toual-Expenses">0</span></h4>
+                        <h4 class="fw-bold"> Balance: <span id="balance-after-Expenses">0</span></h4>
                     </div>
                     <!-- saving part  -->
-                    <div class="text-center mt-2 mb-3">
-                        <span class="fs-6 pe-2">save:</span>
+                    <div class=" mt-2 mb-3">
+                        <span class="fs-5 fw-bold pe-2">save:</span>
                         <input id="saving-input-fild" class="p-1 m-2" type="text">
                         <span class="fs-6 mx-3"> % </span>
                         <span>
                             <button id="save-button" class="save-button">save</button>
                         </span>
                     </div>
-                    <div class="text-center mt-4">
-                        <h5>Saving Amount: <span id="saving-Amount">0</span></h5>
-                        <h5>Remaining Balance: : <span id="remain-balance">0</span></h5>
+                    <!-- save Amount -->
+                    <div class=" mt-4 fw-bold">
+                        <h4 class="fw-bold">Saving Amount: <span id="saving-Amount">0</span></h4>
+                        <!-- remain balance -->
+                        <h4 class="fw-bold">Remaining Balance: : <span id="remain-balance">0</span></h4>
                     </div>
                 </div>
             </div>
