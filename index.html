@@ -31,31 +31,31 @@
                 <!---------------- money calculator ------------------>
                 <div class="calculator-section m-3 w-100">
                     <div class="text-center fs-6">
-                        <!------ income part  ------>
+                        <!------ income input part  ------>
                         <h5 class="text-center pt-3 ">Income</h5>
                         <p class="my-4 fw-bold d-block ">Income :
-                            <input class="p-1 " type="text">
+                            <input id="income-input" class="p-1 " type="text">
                         </p>
-                        <!-- Expenses part -->
+                        <!-- Expenses input part -->
                         <h5 class="text-center pt-1 ">Expenses</h5>
                         <p class=" fw-bold ">For Foot:
-                            <input class="p-1 " type="text">
+                            <input id="food-Expenses" class="p-1 " type="text">
                         </p>
                         <p class=" fw-bold ">For Rant:
-                            <input class="p-1 " type="text">
+                            <input id="rent-Expenses" class="p-1 " type="text">
                         </p>
                         <p class=" fw-bold "><span> Clothes:</span>
-                            <input class="p-1 " type="text">
+                            <input id="clothes-Expenses" class="p-1 " type="text">
                         </p>
                     </div>
                     <!-- button of money calculator -->
-                    <div class="text-center">
+                    <div id="calculator-bnt" class="text-center">
                         <button class="cal-button">Calculate</button>
                     </div>
                     <!------ totul result section  ------>
                     <div class="text-center mt-4 mb-5">
-                        <h5>Total Expenses: <span>0</span></h5>
-                        <h5> Balance: <span>0</span></h5>
+                        <h5>Total Expenses: <span id="toual-Expenses">0</span></h5>
+                        <h5> Balance: <span id="balance-after-Expenses">0</span></h5>
                     </div>
                     <!-- saving part  -->
                     <div class="text-center mt-2 mb-3">
@@ -63,12 +63,12 @@
                         <input id="saving-input-fild" class="p-1 m-2" type="text">
                         <span class="fs-6 mx-3"> % </span>
                         <span>
-                            <button class="save-button">save</button>
+                            <button id="save-button" class="save-button">save</button>
                         </span>
                     </div>
                     <div class="text-center mt-4">
-                        <h5>Saving Amount: <span>0</span></h5>
-                        <h5>Remaining Balance: : <span>0</span></h5>
+                        <h5>Saving Amount: <span id="saving-Amount">0</span></h5>
+                        <h5>Remaining Balance: : <span id="remain-balance">0</span></h5>
                     </div>
                 </div>
             </div>
