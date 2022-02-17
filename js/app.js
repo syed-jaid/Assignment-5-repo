@@ -49,10 +49,11 @@ document.getElementById('save-button').addEventListener('click', function () {
     // saving Input  
     const savingInput = Amount('saving-input-fild');
     const saveingInputValue = parseFloat(savingInput);
-    // saving value 
+    // if number Negative 
     if (saveingInputValue < 0) {
         alert('Negative values not acceptable. Please enter a positive value !');
     }
+    // if input value is text 
     else if (isNaN(saveingInputValue)) {
         alert('No text can be used. Please enter a number !');
     }
@@ -60,17 +61,18 @@ document.getElementById('save-button').addEventListener('click', function () {
         const saveingValue = Incomeparsevaslue / 100 * saveingInputValue;
         // balance after Expenses and saving 
         let balance = document.getElementById('balance-after-Expenses');
+        // saving totul 
         const savingtotul = document.getElementById('saving-Amount');
+        // remain Balance 
         const remainBalance = document.getElementById('remain-balance');
         const balanceinnertext = balance.innerText;
         if (saveingValue > balanceinnertext) {
             alert('You cant save so much money. Balance is low after expenses!')
         }
         else {
+            // remain Balance amount
             savingtotul.innerText = saveingValue;
             // balance after Expenses and saving 
-
-            // remain Balance amount
             remainBalance.innerText = parseFloat(balanceinnertext) -
                 (Incomeparsevaslue / 100 * saveingInputValue);
         }

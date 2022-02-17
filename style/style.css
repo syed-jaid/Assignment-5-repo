@@ -20,6 +20,9 @@ background-color: rgb(108, 182, 252);
 border-radius:15px ;
 border: 0;
 }
+.background-of-zero{
+color: #eef9fc;
+}
 /* saving part  */
 #saving-input-fild{
 width: 100px;
